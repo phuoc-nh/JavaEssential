@@ -1,17 +1,22 @@
 public class Iphone {
-    private String model;
+    private IphoneModels model;
     private double price;
 
-    public Iphone(String model, double price) {
+    public Iphone(IphoneModels model, double price) {
         this.model = model;
         this.price = price;
     }
 
-    public String getModel() {
+    public Iphone(IphoneModels model) {
+        this(model, 11);
+        this.model = model;
+    }
+
+    public IphoneModels getModel() {
         return model;
     }
 
-    public void setModel(String model) {
+    public void setModel(IphoneModels model) {
         this.model = model;
     }
 
@@ -21,5 +26,13 @@ public class Iphone {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Iphone{" +
+                "model='" + model + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
